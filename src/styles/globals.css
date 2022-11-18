@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Astro';
+    font-weight: 700;
+    src: url('/fonts/astro/AstroSpace.woff2') format('woff2'),
+      url('/fonts/astro/AstroSpace.woff') format('woff');
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .btn-colors {
+    @apply border-blue-600 text-blue-500 shadow-lg transition-all duration-200 hover:bg-gradient-to-r hover:from-cyan-500 hover:via-blue-500 hover:to-blue-600 hover:text-white hover:shadow-blue-500/70 focus:outline-none;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-blue {
+    @apply bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-600;
+  }
+}

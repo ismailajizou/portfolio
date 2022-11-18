@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi👋, I'm",
+    "description": "Full stack web developer, specialized in turning ideas into code 👨‍💻."
+  },
+  "about": {
+    "title": "About me",
+    "description": [
+      "My name is Ismail AJIZOU full stack web developer based in Morocco, with +3 years of experience in JavaScript, React.js & Express.js.",
+      "My enthusiasm for programming started back in 2018, when I decided to replicate a simple bash script created by a friend. Then I fell in love with computers and started learning web dev.",
+      "My motiviation is to build projects and turn ideas into code, so each time I want to learn something I use it in a project.",
+      "After getting a computer science degree in 2022, I immediately landed my first job as a full stack web developer.",
+      "Currently I work as web developer, and never miss the chance to learn new technologies and improve my skills."
+    ]
+  }
+}
