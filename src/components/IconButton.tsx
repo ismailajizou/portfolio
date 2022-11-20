@@ -12,7 +12,7 @@ const IconButton: FC<Props> = ({ href, icon }) => {
   return (
     <a
       href={href}
-      className='btn-colors m-1 flex h-8 w-8 items-center justify-center
+      className='btn-colors cursor-pointer m-1 flex h-8 w-8 items-center justify-center
         rounded-full border bg-neutral-900 bg-opacity-70 font-medium
         focus:outline-none'
     >

@@ -1,6 +1,6 @@
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
-import { Container, Engine } from 'tsparticles-engine';
+import type { Container, Engine } from 'tsparticles-engine';
 
 const ParticlesBg = () => {
   const particlesInit = async (main: Engine) => {
@@ -9,7 +9,8 @@ const ParticlesBg = () => {
     await loadFull(main);
   };
 
-  const particlesLoaded = (container: Container | undefined): Promise<void> => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const particlesLoaded = (_container: Container | undefined): Promise<void> => {
     // console.log(container);
     return new Promise(() => null);
   };
@@ -58,7 +59,7 @@ const ParticlesBg = () => {
               enable: true,
               area: 500,
             },
-            value: 30,
+            value: 20,
           },
           opacity: {
             value: 0.3,

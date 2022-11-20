@@ -4,7 +4,7 @@ import Image from 'next/image';
 const AboutPanel = () => {
   return (
     <div className='mx-auto flex max-w-5xl items-center'>
-      <div className='relative m-2'>
+      <div className='relative mx-4'>
         <Image
           alt='me'
           src={Me}
@@ -13,7 +13,7 @@ const AboutPanel = () => {
         <div className='absolute top-4 left-4 -z-10 h-52 w-52 rounded-lg border-2 border-blue-700' />
       </div>
       <div className='ml-4 max-w-3xl text-lg font-bold leading-8 text-white'>
-        <h4 className='text-gradient gradient-blue mb-4 text-4xl'>who am i</h4>
+        <h4 className='text-gradient gradient-blue mb-4 text-4xl'>Who am I</h4>
         <div className='flex flex-col gap-y-2'>
           <p>
             My name is Ismail AJIZOU full stack web developer based in Morocco,

@@ -6,8 +6,14 @@
   @font-face {
     font-family: 'Astro';
     font-weight: 700;
-    src: url('/fonts/astro/AstroSpace.woff2') format('woff2'),
-      url('/fonts/astro/AstroSpace.woff') format('woff');
+    src: url('/fonts/astro/astro.woff2') format('woff2'),
+      url('/fonts/astro/astro.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Tenika';
+    font-weight: 700;
+    src: url('/fonts/tenika/tenika.woff2') format('woff2'),
+    url('/fonts/tenika/tenika.woff') format('woff');
   }
 }
 

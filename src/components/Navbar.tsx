@@ -8,9 +8,14 @@ import IconButtonWithText from './IconButtonWithText';
 
 const Navbar = () => {
   return (
-    <div className='flex h-16 w-full items-center justify-between px-4 py-1'>
-      <div className='relative h-full'>
-        <Image src='/icons/icon.svg' alt='logo' fill priority />
+    <div className='relative flex h-16 w-full items-center justify-between px-4 py-1'>
+      <div className='relative h-full aspect-square'>
+        <Image
+          src='/icons/icon.svg'
+          alt='logo'
+          fill
+          priority
+        />
       </div>
       <ButtonsStack direction='horizontal'>
         <IconButtonWithText icon={FaHome}>Home</IconButtonWithText>

@@ -7,7 +7,9 @@ module.exports = {
         xs: '2px',
       },
       fontFamily: {
-        astro: "'Astro', sans-serif",
+        // astro: "'Astro', sans-serif",
+        // tenika: "'Tenika', sans-serif",
+        sans: ['var(--font-space-mono)']
       },
     },
   },

@@ -1,9 +1,9 @@
-import {
+import type {
   IParallaxLayer,
-  ParallaxLayer,
   ParallaxLayerProps,
 } from '@react-spring/parallax';
-import { FC } from 'react';
+import { ParallaxLayer } from '@react-spring/parallax';
+import type { FC } from 'react';
 
 type Props = ParallaxLayerProps & React.RefAttributes<IParallaxLayer>;
 
