@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Script from 'next/script';
-import { env  } from '@/env/client.mjs';
+import { env } from '@/env/client.mjs';
 
 const AppHead = () => {
   return (

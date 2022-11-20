@@ -10,7 +10,9 @@ const ParticlesBg = () => {
   };
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const particlesLoaded = (_container: Container | undefined): Promise<void> => {
+  const particlesLoaded = (
+    _container: Container | undefined
+  ): Promise<void> => {
     // console.log(container);
     return new Promise(() => null);
   };

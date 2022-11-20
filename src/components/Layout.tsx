@@ -3,7 +3,7 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import ParticlesBg from './ParticlesBg';
 import Sidebar from './Sidebar';
-import { Space_Mono } from '@next/font/google'
+import { Space_Mono } from '@next/font/google';
 
 interface Props {
   className?: string;
@@ -13,12 +13,14 @@ interface Props {
 const spaceMono = Space_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
-  variable: '--font-space-mono'
+  variable: '--font-space-mono',
 });
 
 const Layout: FC<Props> = ({ children }) => {
   return (
-    <div className={`relative h-screen w-screen ${spaceMono.variable} font-sans`}>
+    <div
+      className={`relative h-screen w-screen ${spaceMono.variable} font-space-mono`}
+    >
       <ParticlesBg />
       <div className='max-w-screen relative flex h-screen max-h-screen w-screen flex-col'>
         <Navbar />

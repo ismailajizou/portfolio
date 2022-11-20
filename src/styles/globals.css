@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  @font-face {
-    font-family: 'Astro';
-    font-weight: 700;
-    src: url('/fonts/astro/astro.woff2') format('woff2'),
-      url('/fonts/astro/astro.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'Tenika';
-    font-weight: 700;
-    src: url('/fonts/tenika/tenika.woff2') format('woff2'),
-    url('/fonts/tenika/tenika.woff') format('woff');
-  }
-}
-
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

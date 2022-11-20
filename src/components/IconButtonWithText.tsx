@@ -12,7 +12,7 @@ const IconButtonWithText: FC<Props> = ({ icon, href, children }) => {
     <a
       href={href}
       style={{ transition: '.2s' }}
-      className='btn-colors cursor-pointer group relative m-1 inline-flex h-8 items-center justify-start overflow-hidden
+      className='btn-colors group relative m-1 inline-flex h-8 cursor-pointer items-center justify-start overflow-hidden
         rounded-full border bg-neutral-900 bg-opacity-70 p-4 text-sm font-medium
         focus:outline-none'
     >

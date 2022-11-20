@@ -28,5 +28,4 @@ export const clientSchema = z.object({
 export const clientEnv = {
   NEXT_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
   NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
-
 };
