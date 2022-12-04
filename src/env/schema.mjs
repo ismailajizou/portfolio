@@ -17,6 +17,10 @@ export const serverSchema = z.object({
 export const clientSchema = z.object({
   NEXT_PUBLIC_GOOGLE_ANALYTICS: z.string(),
   NEXT_PUBLIC_APP_URL: z.string().url(),
+  NEXT_PUBLIC_PROFILE_LINKEDIN: z.string().url(),
+  NEXT_PUBLIC_PROFILE_GITHUB: z.string().url(),
+  NEXT_PUBLIC_PROFILE_TWITTER: z.string().url(),
+  NEXT_PUBLIC_PROFILE_FACEBOOK: z.string().url(),
 });
 
 /**
@@ -28,4 +32,8 @@ export const clientSchema = z.object({
 export const clientEnv = {
   NEXT_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
   NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+  NEXT_PUBLIC_PROFILE_LINKEDIN: process.env.NEXT_PUBLIC_PROFILE_LINKEDIN,
+  NEXT_PUBLIC_PROFILE_GITHUB: process.env.NEXT_PUBLIC_PROFILE_GITHUB,
+  NEXT_PUBLIC_PROFILE_TWITTER: process.env.NEXT_PUBLIC_PROFILE_TWITTER,
+  NEXT_PUBLIC_PROFILE_FACEBOOK: process.env.NEXT_PUBLIC_PROFILE_FACEBOOK,
 };

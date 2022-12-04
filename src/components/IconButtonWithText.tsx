@@ -1,15 +1,16 @@
+import Link from 'next/link';
 import type { FC, PropsWithChildren } from 'react';
 import type { IconType } from 'react-icons';
 
 interface Props extends PropsWithChildren {
   icon: IconType;
-  href?: string;
+  href: string;
 }
 
 const IconButtonWithText: FC<Props> = ({ icon, href, children }) => {
   const Icon = icon;
   return (
-    <a
+    <Link
       href={href}
       style={{ transition: '.2s' }}
       className='btn-colors group relative m-1 inline-flex h-8 cursor-pointer items-center justify-start overflow-hidden
@@ -23,7 +24,7 @@ const IconButtonWithText: FC<Props> = ({ icon, href, children }) => {
       >
         {children}
       </span>
-    </a>
+    </Link>
   );
 };
 export default IconButtonWithText;

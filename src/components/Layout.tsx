@@ -1,9 +1,8 @@
+import { Space_Mono } from '@next/font/google';
 import type { FC, ReactNode } from 'react';
-import Footer from './Footer';
 import Navbar from './Navbar';
 import ParticlesBg from './ParticlesBg';
 import Sidebar from './Sidebar';
-import { Space_Mono } from '@next/font/google';
 
 interface Props {
   className?: string;
@@ -19,7 +18,7 @@ const spaceMono = Space_Mono({
 const Layout: FC<Props> = ({ children }) => {
   return (
     <div
-      className={`relative h-screen w-screen ${spaceMono.variable} font-space-mono`}
+      className={`relative h-screen w-screen scroll-smooth ${spaceMono.variable} font-space-mono`}
     >
       <ParticlesBg />
       <div className='max-w-screen relative flex h-screen max-h-screen w-screen flex-col'>
@@ -30,7 +29,6 @@ const Layout: FC<Props> = ({ children }) => {
             {children}
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );

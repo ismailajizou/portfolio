@@ -1,12 +1,19 @@
-import { type NextPage } from 'next';
+import EProject from '@/assets/eclothing.png';
+import Brain from '@/assets/brain.png';
+import AppHead from '@/components/AppHead';
+import IconButtonWithText from '@/components/IconButtonWithText';
 import Layout from '@/components/Layout';
 import Panel from '@/components/Panel';
+import AboutPanel from '@/components/panels/AboutPanel';
 import HomePanel from '@/components/panels/HomePanel';
-import { type IParallax, Parallax } from '@react-spring/parallax';
+import Technology from '@/components/Technology';
+import { Parallax, type IParallax } from '@react-spring/parallax';
+import { type NextPage } from 'next';
+import Image from 'next/image';
 import { useRef } from 'react';
-import { AiFillHtml5 } from 'react-icons/ai';
+import { AiFillEye, AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { FaNode } from 'react-icons/fa';
+import { FaGithub, FaNode } from 'react-icons/fa';
 import {
   SiBootstrap,
   SiDjango,
@@ -21,11 +28,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
-import AboutPanel from '@/components/panels/AboutPanel';
-import Technology from '@/components/Technology';
-import EProject from '@/assets/eclothing.png';
-import Image from 'next/image';
-import AppHead from '@/components/AppHead';
+import Footer from '@/components/Footer';
 
 const Home: NextPage = () => {
   const refParallax = useRef<IParallax | null>(null);
@@ -37,7 +40,7 @@ const Home: NextPage = () => {
         <Parallax
           ref={refParallax}
           className='no-scrollbar inset-0 p-4 lg:p-8'
-          pages={10}
+          pages={7}
         >
           <Panel offset={0} speed={2.5} className='flex items-center' id='home'>
             <HomePanel />
@@ -65,7 +68,7 @@ const Home: NextPage = () => {
               <Technology icon={SiTypescript} name='Typescript' />
               <Technology icon={SiReact} name='React.js' />
               <Technology icon={FaNode} name='Node.js' />
-              <Technology icon={SiMysql} name='Mysql' />
+              <Technology icon={SiMysql} name='MySQL' />
               <Technology
                 icon={SiNextdotjs}
                 name='Next.js'
@@ -107,22 +110,153 @@ const Home: NextPage = () => {
             <h4 className='text-gradient gradient-blue mb-8 text-4xl'>
               Projects
             </h4>
-            <div>
-              <div className='flex max-w-2xl flex-col items-center overflow-hidden rounded-lg border bg-white bg-opacity-70 shadow-md hover:bg-opacity-80'>
-                <Image
-                  className='aspect-video w-full rounded-t-lg object-cover'
-                  src={EProject}
-                  alt='e-commerce'
-                />
-                <div className='flex flex-col justify-between p-4 leading-normal'>
-                  <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900'>
-                    Noteworthy technology acquisitions 2021
-                  </h5>
-                  <p className='mb-3 font-normal text-gray-700'>
-                    Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order.
-                  </p>
+            <div className='mx-auto mt-4 flex max-w-5xl items-center'>
+              <Image
+                className='aspect-video w-96 overflow-hidden rounded-lg object-cover'
+                src={EProject}
+                alt='me'
+              />
+              <div className='ml-4 max-w-3xl text-lg font-bold leading-8 text-white'>
+                <h4 className='text-gradient gradient-blue mb-4 text-4xl italic'>
+                  E-Clothing Webapp
+                </h4>
+                <div className='flex flex-col gap-y-2'>
+                  <p>Modern E-Commerce web application for clothing.</p>
+
+                  <div>
+                    <p>Built with:</p>
+                    <ul className='flex items-center divide-x-2 text-gray-300'>
+                      <li className='px-2'>React.js</li>
+                      <li className='px-2'>SASS</li>
+                      <li className='px-2'>Firebase</li>
+                      <li className='px-2'>Stripe</li>
+                    </ul>
+                  </div>
+                  <div className='flex gap-4'>
+                    <IconButtonWithText href='' icon={FaGithub}>
+                      Code
+                    </IconButtonWithText>
+                    <IconButtonWithText href='' icon={AiFillEye}>
+                      Preview
+                    </IconButtonWithText>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </Panel>
+          <Panel
+            offset={5}
+            speed={0.5}
+            className='flex flex-col items-center justify-center'
+          >
+            <div className='mx-auto flex max-w-5xl items-center'>
+              <Image
+                className='aspect-video w-96 overflow-hidden rounded-lg object-cover'
+                src={Brain}
+                alt='brain project'
+              />
+              <div className='ml-4 max-w-3xl text-lg font-bold leading-8 text-white'>
+                <h4 className='text-gradient gradient-blue mb-4 text-4xl italic'>
+                  Face detection app
+                </h4>
+                <div className='flex max-w-3xl flex-col gap-y-2'>
+                  <p>
+                    My first React.js application. It uses Clarifai API to
+                    detect faces in a given image. It also stores the
+                    authenticated user&apos;s score.
+                  </p>
+
+                  <div>
+                    <p>Built with:</p>
+                    <ul className='flex items-center divide-x-2 text-gray-300'>
+                      <li className='px-2'>React.js</li>
+                      <li className='px-2'>Chakra.UI</li>
+                      <li className='px-2'>Express.js</li>
+                      <li className='px-2'>PostgreSQL</li>
+                    </ul>
+                  </div>
+                  <div className='flex gap-4'>
+                    <IconButtonWithText href='' icon={FaGithub}>
+                      Code
+                    </IconButtonWithText>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Panel>
+          <Panel
+            id='contact'
+            offset={6}
+            speed={0.2}
+            className='flex flex-col items-center justify-center'
+          >
+            <div>
+              <div className='container my-24 mx-auto px-6'>
+                <section className='mb-32 text-gray-800'>
+                  <div className='flex flex-wrap'>
+                    <div className='mb-6 w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-6/12 lg:px-6'>
+                      <h2 className='text-gradient gradient-blue mb-6 text-4xl'>
+                        Contact us
+                      </h2>
+                      <p className='mb-6 text-gray-200'>
+                        My inbox is always open. Whether you have a question or
+                        just want to say hi, I&apos;ll try my best to get back
+                        to you!
+                      </p>
+                      <p className='mb-2 text-gray-200'>
+                        Phone: + 01 234 567 89
+                      </p>
+                    </div>
+                    <div className='mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-6/12 lg:px-6'>
+                      <form>
+                        <div className='mb-6 flex w-full gap-x-4'>
+                          <div className='w-full'>
+                            <input
+                              type='text'
+                              className='w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
+                              id='name'
+                              placeholder='Name'
+                            />
+                          </div>
+                          <div className='w-full'>
+                            <input
+                              type='email'
+                              id='email'
+                              placeholder='Email address'
+                              className='w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
+                            />
+                          </div>
+                        </div>
+                        <div className='mb-6'>
+                          <input
+                            type='text'
+                            className='m-0 block w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
+                            id='subject'
+                            placeholder='Subject'
+                          />
+                        </div>
+                        <div className='form-group mb-6'>
+                          <textarea
+                            className='m-0 block w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
+                            id='body'
+                            rows={4}
+                            placeholder='Message'
+                          ></textarea>
+                        </div>
+                        <button
+                          type='submit'
+                          className='btn-colors relative border px-6 py-2.5 font-medium uppercase leading-tight backdrop-blur-xs'
+                        >
+                          Send
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div>
+                <Footer />
               </div>
             </div>
           </Panel>

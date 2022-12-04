@@ -13,10 +13,18 @@ const Navbar = () => {
         <Image src='/icons/icon.svg' alt='logo' fill priority />
       </div>
       <ButtonsStack direction='horizontal'>
-        <IconButtonWithText icon={FaHome}>Home</IconButtonWithText>
-        <IconButtonWithText icon={CgProfile}>About</IconButtonWithText>
-        <IconButtonWithText icon={IoImages}>Work</IconButtonWithText>
-        <IconButtonWithText icon={RiSendPlaneFill}>Contact</IconButtonWithText>
+        <IconButtonWithText href='#home' icon={FaHome}>
+          Home
+        </IconButtonWithText>
+        <IconButtonWithText href='#about' icon={CgProfile}>
+          About
+        </IconButtonWithText>
+        <IconButtonWithText href='#work' icon={IoImages}>
+          Work
+        </IconButtonWithText>
+        <IconButtonWithText href='#contact' icon={RiSendPlaneFill}>
+          Contact
+        </IconButtonWithText>
       </ButtonsStack>
     </div>
   );
