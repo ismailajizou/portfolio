@@ -191,69 +191,7 @@ const Home: NextPage = () => {
             className='flex flex-col items-center justify-center'
           >
             <div>
-              <div className='container my-24 mx-auto px-6'>
-                <section className='mb-32 text-gray-800'>
-                  <div className='flex flex-wrap'>
-                    <div className='mb-6 w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-6/12 lg:px-6'>
-                      <h2 className='text-gradient gradient-blue mb-6 text-4xl'>
-                        Contact us
-                      </h2>
-                      <p className='mb-6 text-gray-200'>
-                        My inbox is always open. Whether you have a question or
-                        just want to say hi, I&apos;ll try my best to get back
-                        to you!
-                      </p>
-                      <p className='mb-2 text-gray-200'>
-                        Phone: + 01 234 567 89
-                      </p>
-                    </div>
-                    <div className='mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-6/12 lg:px-6'>
-                      <form>
-                        <div className='mb-6 flex w-full gap-x-4'>
-                          <div className='w-full'>
-                            <input
-                              type='text'
-                              className='w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
-                              id='name'
-                              placeholder='Name'
-                            />
-                          </div>
-                          <div className='w-full'>
-                            <input
-                              type='email'
-                              id='email'
-                              placeholder='Email address'
-                              className='w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
-                            />
-                          </div>
-                        </div>
-                        <div className='mb-6'>
-                          <input
-                            type='text'
-                            className='m-0 block w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
-                            id='subject'
-                            placeholder='Subject'
-                          />
-                        </div>
-                        <div className='form-group mb-6'>
-                          <textarea
-                            className='m-0 block w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
-                            id='body'
-                            rows={4}
-                            placeholder='Message'
-                          ></textarea>
-                        </div>
-                        <button
-                          type='submit'
-                          className='btn-colors relative border px-6 py-2.5 font-medium uppercase leading-tight backdrop-blur-xs'
-                        >
-                          Send
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </section>
-              </div>
+              
 
               <div>
                 <Footer />

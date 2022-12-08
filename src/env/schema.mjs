@@ -7,6 +7,9 @@ import { z } from 'zod';
  */
 export const serverSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']),
+  MAILTRAP_TOKEN: z.string(),
+  MAILTRAP_ENDPOINT: z.string().url(),
+  MAIL_RECEIVER: z.string().email(),
 });
 
 /**
