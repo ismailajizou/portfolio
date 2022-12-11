@@ -1,3 +1,4 @@
+import { env } from '@/env/client.mjs';
 import { mailSchema, TMail } from '@/utils/schemas/mail.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { AxiosError } from 'axios';
@@ -42,7 +43,7 @@ const ContactPanel = () => {
               My inbox is always open. Whether you have a question or just want
               to say hi, I&apos;ll try my best to get back to you!
             </p>
-            <p className='mb-2 text-gray-200'>Phone: + 01 234 567 89</p>
+            <p className='mb-2 text-gray-200'>Phone: {env.NEXT_PUBLIC_PHONE_NUMBER}</p>
           </div>
           <div className='mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-6/12 lg:px-6'>
             <form onSubmit={handleSubmit(onSubmit)}>

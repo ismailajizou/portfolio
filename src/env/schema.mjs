@@ -23,6 +23,7 @@ export const clientSchema = z.object({
   NEXT_PUBLIC_PROFILE_GITHUB: z.string().url(),
   NEXT_PUBLIC_PROFILE_TWITTER: z.string().url(),
   NEXT_PUBLIC_PROFILE_FACEBOOK: z.string().url(),
+  NEXT_PUBLIC_PHONE_NUMBER: z.string(),
 });
 
 /**
@@ -37,4 +38,5 @@ export const clientEnv = {
   NEXT_PUBLIC_PROFILE_GITHUB: process.env.NEXT_PUBLIC_PROFILE_GITHUB,
   NEXT_PUBLIC_PROFILE_TWITTER: process.env.NEXT_PUBLIC_PROFILE_TWITTER,
   NEXT_PUBLIC_PROFILE_FACEBOOK: process.env.NEXT_PUBLIC_PROFILE_FACEBOOK,
+  NEXT_PUBLIC_PHONE_NUMBER: process.env.NEXT_PUBLIC_PHONE_NUMBER,
 };
