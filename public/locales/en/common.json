@@ -7,16 +7,62 @@
   },
   "hero": {
     "title": "Hi👋, I'm",
-    "description": "Full stack web developer, specialized in turning ideas into code 👨‍💻."
+    "description": [
+      "Full stack web developer",
+      "Javascript / Typescript developer",
+      "React.js / Next.js developer",
+      "JAM stack developer"
+    ],
+    "button": "Check out my resume"
   },
   "about": {
-    "title": "About me",
-    "description": [
-      "My name is Ismail AJIZOU full stack web developer based in Morocco, with +3 years of experience in JavaScript, React.js & Express.js.",
-      "My enthusiasm for programming started back in 2018, when I decided to replicate a simple bash script created by a friend. Then I fell in love with computers and started learning web dev.",
-      "My motiviation is to build projects and turn ideas into code, so each time I want to learn something I use it in a project.",
-      "After getting a computer science degree in 2022, I immediately landed my first job as a full stack web developer.",
-      "Currently I work as web developer, and never miss the chance to learn new technologies and improve my skills."
-    ]
+    "title": "Who am I",
+    "description": "My name is Ismail AJIZOU full stack web developer based in Morocco, with +3 years of experience in JavaScript, React.js & Express.js. <br/>My enthusiasm for programming started back in 2018, when I decided to replicate a simple bash script created by a friend. Then I fell in love with computers and started learning web dev.<br/>My motiviation is to build projects and turn ideas into code, so each time I want to learn something I use it in a project.<br/>After getting a computer science degree in 2022, I immediately landed my first job as a full stack web developer.<br/>Currently I work as web developer, and never miss the chance to learn new technologies and improve my skills.",
+    "lovedLangs": "Technologies I Love & Use everyday",
+    "casualLangs": "Technologies I Use every once in a while"
+  },
+  "projects": {
+    "title": "Projects",
+    "eclothing": {
+      "title": "E-Clothing",
+      "description": "Modern E-Commerce web application for clothing."
+    },
+    "brain": {
+      "title": "Face detection app",
+      "description": "My first React.js application. It uses Clarifai API to detect faces in a given image. It also stores the authenticated user's score."
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "description": "My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send"
+    },
+    "social": {
+      "description": "You can also find me on these platforms",
+      "phone": "Phone"
+    }
+  },
+  "footer": "Designed & built By Ismail Ajizou.<br/> © 2022. All rights reserved.",
+  "extra": {
+    "built-with": "Built with",
+    "preview": "Preview",
+    "code": "Code",
+    "404": "Not found",
+    "invalid-request": "Invalid request",
+    "unknown-error": "An error has occured. Please try again later.",
+    "mail-sent": "Your message has been sent. I'll get back to you as soon as possible.",
+    "invalid-inputs": "Please verify your inputs."
+  },
+  "zod-errors": {
+    "invalid_type_error": "Invalid input type",
+    "required_error": "This field is required",
+    "min": "Field must be at least {min} characters long",
+    "max": "Field must be at most {max} characters long",
+    "email": "Invalid email address"
   }
 }

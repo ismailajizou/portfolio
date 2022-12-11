@@ -8,7 +8,11 @@ import AboutPanel from '@/components/panels/AboutPanel';
 import HomePanel from '@/components/panels/HomePanel';
 import Technology from '@/components/Technology';
 import { Parallax, type IParallax } from '@react-spring/parallax';
-import { type NextPage } from 'next';
+import {
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+  type NextPage,
+} from 'next';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { AiFillEye, AiFillHtml5 } from 'react-icons/ai';
@@ -30,8 +34,21 @@ import {
 } from 'react-icons/si';
 import Footer from '@/components/Footer';
 import ContactPanel from '@/components/panels/ContactPanel';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'react-i18next';
 
-const Home: NextPage = () => {
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  };
+}
+
+const Home: NextPage = (
+  _props: InferGetStaticPropsType<typeof getStaticProps>
+) => {
+  const { t } = useTranslation();
   const refParallax = useRef<IParallax | null>(null);
   return (
     <>
@@ -59,8 +76,8 @@ const Home: NextPage = () => {
             speed={0.7}
             className='flex flex-col items-center justify-center'
           >
-            <h4 className='text-gradient gradient-blue mb-8 text-4xl'>
-              Technologies I Love & Use everyday
+            <h4 className='text-gradient gradient-blue mb-8 text-4xl font-bold'>
+              {t('about.lovedLangs')}
             </h4>
             <div className='grid grid-cols-7 justify-center gap-8 text-white text-opacity-70'>
               <Technology icon={AiFillHtml5} name='HTML5' />
@@ -92,8 +109,8 @@ const Home: NextPage = () => {
             speed={0.6}
             className='flex flex-col items-center justify-center'
           >
-            <h4 className='text-gradient gradient-blue mb-8 text-4xl'>
-              Technologies I Use every once in a while
+            <h4 className='text-gradient gradient-blue mb-8 text-4xl font-bold'>
+              {t('about.casualLangs')}
             </h4>
             <div className='grid grid-flow-col justify-center gap-8 text-white text-opacity-70'>
               <Technology icon={SiPython} name='Python' />
@@ -109,24 +126,24 @@ const Home: NextPage = () => {
             speed={0.5}
             className='flex flex-col items-center justify-center'
           >
-            <h4 className='text-gradient gradient-blue mb-8 text-4xl'>
-              Projects
+            <h4 className='text-gradient gradient-blue mb-8 text-4xl font-bold'>
+              {t('projects.title')}
             </h4>
             <div className='mx-auto mt-4 flex max-w-5xl items-center'>
               <Image
                 className='aspect-video w-96 overflow-hidden rounded-lg object-cover'
                 src={EProject}
-                alt='me'
+                alt='e-clothing app'
               />
               <div className='ml-4 max-w-3xl text-lg font-bold leading-8 text-white'>
                 <h4 className='text-gradient gradient-blue mb-4 text-4xl italic'>
-                  E-Clothing Webapp
+                  {t('projects.eclothing.title')}
                 </h4>
                 <div className='flex flex-col gap-y-2'>
-                  <p>Modern E-Commerce web application for clothing.</p>
+                  <p>{t('projects.eclothing.description')}</p>
 
                   <div>
-                    <p>Built with:</p>
+                    <p>{t('extra.built-with')}</p>
                     <ul className='flex items-center divide-x-2 text-gray-300'>
                       <li className='px-2'>React.js</li>
                       <li className='px-2'>SASS</li>
@@ -135,11 +152,17 @@ const Home: NextPage = () => {
                     </ul>
                   </div>
                   <div className='flex gap-4'>
-                    <IconButtonWithText href='' icon={FaGithub}>
-                      Code
+                    <IconButtonWithText
+                      href='https://github.com/ismailajizou/E-Clothing'
+                      icon={FaGithub}
+                    >
+                      {t('extra.code')}
                     </IconButtonWithText>
-                    <IconButtonWithText href='' icon={AiFillEye}>
-                      Preview
+                    <IconButtonWithText
+                      href='https://e-clothing.vercel.app'
+                      icon={AiFillEye}
+                    >
+                      {t('extra.preview')}
                     </IconButtonWithText>
                   </div>
                 </div>
@@ -159,17 +182,13 @@ const Home: NextPage = () => {
               />
               <div className='ml-4 max-w-3xl text-lg font-bold leading-8 text-white'>
                 <h4 className='text-gradient gradient-blue mb-4 text-4xl italic'>
-                  Face detection app
+                  {t('projects.brain.title')}
                 </h4>
                 <div className='flex max-w-3xl flex-col gap-y-2'>
-                  <p>
-                    My first React.js application. It uses Clarifai API to
-                    detect faces in a given image. It also stores the
-                    authenticated user&apos;s score.
-                  </p>
+                  <p>{t('projects.brain.description')}</p>
 
                   <div>
-                    <p>Built with:</p>
+                    <p>{t('extra.built-with')}</p>
                     <ul className='flex items-center divide-x-2 text-gray-300'>
                       <li className='px-2'>React.js</li>
                       <li className='px-2'>Chakra.UI</li>
@@ -178,8 +197,11 @@ const Home: NextPage = () => {
                     </ul>
                   </div>
                   <div className='flex gap-4'>
-                    <IconButtonWithText href='' icon={FaGithub}>
-                      Code
+                    <IconButtonWithText
+                      href='https://github.com/ismailajizou/Face-Detection-App'
+                      icon={FaGithub}
+                    >
+                      {t('extra.code')}
                     </IconButtonWithText>
                   </div>
                 </div>
@@ -194,10 +216,7 @@ const Home: NextPage = () => {
           >
             <div>
               <ContactPanel />
-
-              <div>
-                <Footer />
-              </div>
+              <Footer />
             </div>
           </Panel>
         </Parallax>

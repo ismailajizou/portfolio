@@ -4,9 +4,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { AxiosError } from 'axios';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { CgSpinnerTwoAlt } from 'react-icons/cg';
 
 const ContactPanel = () => {
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -24,11 +26,6 @@ const ContactPanel = () => {
     } catch (err) {
       if (err instanceof AxiosError)
         setResponse({ status: 'error', message: err.response?.data.message });
-      else
-        setResponse({
-          status: 'error',
-          message: 'Something went wrong. Please try again later.',
-        });
     }
   };
   return (
@@ -36,14 +33,16 @@ const ContactPanel = () => {
       <section className='mb-32 text-gray-800'>
         <div className='flex flex-wrap'>
           <div className='mb-6 w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-6/12 lg:px-6'>
-            <h2 className='text-gradient gradient-blue mb-6 text-4xl'>
-              Contact us
+            <h2 className='text-gradient gradient-blue mb-6 text-4xl font-bold'>
+              {t('contact.title')}
             </h2>
+            <p className='mb-6 text-gray-200'>{t('contact.description')}</p>
             <p className='mb-6 text-gray-200'>
-              My inbox is always open. Whether you have a question or just want
-              to say hi, I&apos;ll try my best to get back to you!
+              {t('contact.social.description')}
             </p>
-            <p className='mb-2 text-gray-200'>Phone: {env.NEXT_PUBLIC_PHONE_NUMBER}</p>
+            <p className='mb-2 text-gray-200'>
+              {t('contact.social.phone')}: {env.NEXT_PUBLIC_PHONE_NUMBER}
+            </p>
           </div>
           <div className='mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-6/12 lg:px-6'>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -52,7 +51,7 @@ const ContactPanel = () => {
                   <input
                     type='text'
                     className='w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
-                    placeholder='Name'
+                    placeholder={t('contact.form.name') ?? 'Name'}
                     {...register('name')}
                   />
                   {errors.name?.message && (
@@ -64,7 +63,7 @@ const ContactPanel = () => {
                 <div className='w-full'>
                   <input
                     type='email'
-                    placeholder='Email address'
+                    placeholder={t('contact.form.email') ?? 'Email'}
                     className='w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
                     {...register('email')}
                   />
@@ -79,7 +78,7 @@ const ContactPanel = () => {
                 <input
                   type='text'
                   className='m-0 block w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 transition ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
-                  placeholder='Subject'
+                  placeholder={t('contact.form.subject') ?? 'Subject'}
                   {...register('subject')}
                 />
                 {errors.subject?.message && (
@@ -92,7 +91,7 @@ const ContactPanel = () => {
                 <textarea
                   className='m-0 block w-full border border-solid border-gray-300 bg-gray-900 bg-opacity-80 bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-300 ease-in-out focus:border-blue-600 focus:bg-opacity-90 focus:outline-none'
                   rows={4}
-                  placeholder='Message'
+                  placeholder={t('contact.form.message') ?? 'Message'}
                   {...register('body')}
                 />
                 {errors.body?.message && (
@@ -109,7 +108,7 @@ const ContactPanel = () => {
                   {isSubmitting ? (
                     <CgSpinnerTwoAlt className='h-4 w-4 animate-spin' />
                   ) : null}
-                  Send
+                  {t('contact.form.submit')}
                 </button>
                 {response && (
                   <p

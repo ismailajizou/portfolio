@@ -1635,8 +1635,8 @@ packages:
       void-elements: 3.1.0
     dev: false
 
-  /i18next-fs-backend/2.0.1:
-    resolution: {integrity: sha512-fzeiFOXqsMiFAFUnNyC4buERI11vTAuf7JIDWqaiPgBK3R+XJQMSY1LyoXaWspBEFaAkXH/0uMbOv7nttBFztg==}
+  /i18next-fs-backend/2.1.0:
+    resolution: {integrity: sha512-gur0HAEkVDeUgZ9WNUcACYYl2N5FUt0C6bQCWsFPc+IYMXYWfiFQa8QQ930QAVYf71I75Ptl4XqQo5sl/u6/mA==}
     dev: false
 
   /i18next/22.1.4:
@@ -1973,7 +1973,7 @@ packages:
       core-js: 3.26.1
       hoist-non-react-statics: 3.3.2
       i18next: 22.1.4
-      i18next-fs-backend: 2.0.1
+      i18next-fs-backend: 2.1.0
       next: 13.0.6_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-i18next: 12.1.1_uedexzmmdjaqapw3mm5hri2poi

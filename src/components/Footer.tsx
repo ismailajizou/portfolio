@@ -1,13 +1,10 @@
+import { Trans, useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
-    <div className='h-16 items-center justify-center text-center text-sm text-white'>
-      <p className=''>
-        Designed & built By Ismail Ajizou.
-      </p>
-      <div>
-      © 2022. All rights reserved.
-      </div>
+    <div className='text-center text-sm text-white'>
+      <Trans as='div'>{t('footer')}</Trans>
     </div>
   );
 };
