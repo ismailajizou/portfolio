@@ -1,6 +1,6 @@
+import { env } from '@/env/client.mjs';
 import Head from 'next/head';
 import Script from 'next/script';
-import { env } from '@/env/client.mjs';
 
 const AppHead = () => {
   return (
@@ -33,7 +33,7 @@ const AppHead = () => {
         <meta property='og:type' content='website' />
         <meta
           property='og:image'
-          content={`${env.NEXT_PUBLIC_APP_URL}/icon.png`}
+          content={`/icon.png`}
         />
         <meta name='twitter:title' content='Ismail AJIZOU' />
         <link

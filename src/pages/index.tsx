@@ -29,6 +29,7 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import Footer from '@/components/Footer';
+import ContactPanel from '@/components/panels/ContactPanel';
 
 const Home: NextPage = () => {
   const refParallax = useRef<IParallax | null>(null);
@@ -103,6 +104,7 @@ const Home: NextPage = () => {
             </div>
           </Panel>
           <Panel
+            id='work'
             offset={4}
             speed={0.5}
             className='flex flex-col items-center justify-center'
@@ -191,7 +193,7 @@ const Home: NextPage = () => {
             className='flex flex-col items-center justify-center'
           >
             <div>
-              
+              <ContactPanel />
 
               <div>
                 <Footer />

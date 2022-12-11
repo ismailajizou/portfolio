@@ -19,7 +19,7 @@ const ParticlesBg = () => {
 
   return (
     <Particles
-      className='fixed inset-0 m-0 h-screen w-screen p-0'
+      className='fixed inset-0 m-0 h-screen w-screen p-0 -z-50'
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
@@ -82,17 +82,17 @@ const ParticlesBg = () => {
           events: {
             onHover: {
               enable: true,
-              mode: 'grab',
+              mode: 'repulse',
             },
-            onClick: {
-              enable: true,
-              mode: 'push',
-            },
+            // onClick: {
+            //   enable: true,
+            //   mode: 'repulse',
+            // },
           },
         },
         backgroundMode: {
-          zIndex: -10,
-          enable: true,
+          zIndex: -50,
+          enable: false,
         },
       }}
     />

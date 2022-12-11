@@ -7,12 +7,12 @@ import IconButton from './IconButton';
 type SocialMedia = 'linkedin' | 'github' | 'facebook' | 'twitter';
 type T = { [k in SocialMedia]: { icon: IconType; link: string } };
 
-const SOCIAL_LINKS = {
+const SOCIAL_LINKS: T = {
   github: { icon: FaGithub, link: env.NEXT_PUBLIC_PROFILE_GITHUB },
   facebook: { icon: FaFacebookF, link: env.NEXT_PUBLIC_PROFILE_FACEBOOK },
   linkedin: { icon: FaLinkedinIn, link: env.NEXT_PUBLIC_PROFILE_LINKEDIN },
   twitter: { icon: FaTwitter, link: env.NEXT_PUBLIC_PROFILE_TWITTER },
-} satisfies T;
+};
 
 const Sidebar = () => {
   return (
