@@ -15,10 +15,10 @@ import {
   InferGetStaticPropsType,
   type NextPage,
 } from 'next';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import { AiFillEye, AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { FaGithub, FaNode } from 'react-icons/fa';

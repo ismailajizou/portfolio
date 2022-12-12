@@ -1,71 +1,68 @@
 {
-    "navigation": {
-      "home": "Acceuil",
-      "about": "À propos",
-      "work": "Projets",
-      "contact": "Contact"
+  "navigation": {
+    "home": "Acceuil",
+    "about": "À propos",
+    "work": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Bonjour👋, je suis",
+    "description": [
+      "Développeur Full stack",
+      "Développeur Javascript / Typescript",
+      "Développeur React.js / Next.js",
+      "Développeur JAM stack"
+    ],
+    "button": "Consulter mon CV"
+  },
+  "about": {
+    "title": "À propos",
+    "description": "Je m'appelle Ismail AJIZOU, développeur web full stack habitant au Maroc, avec plus de 3 ans d'experience en Javascript, React.js et Express.js.<br/>Ma passion pour la programmation a commencé depuis mon plus jeune âge (15 ans), quand j'ai essayé de recréer un script bash simple que mon ami m'a montré. Ainsi, l'amoure pour ce monde était ma grande motivation pour explorer et en apprendre davantage.<br/>Je crois fermement en \"apprendre en faisant\", donc j'essaie toujours de faire des projets avec les technologies que j'apprends.<br/>Après l'obtention de mon diplôme universitaire de technologie en 2022, j'ai décroché mon premier emploi en tant que développeur full stack. <br/>Actuellement, j'essaie de  concilier entre le travail et l'apprentissage des nouvelle technologies pour être à jour et développer mes compétences.",
+    "lovedLangs": "Téchnologies que j'utilise régulièrement",
+    "casualLangs": "Téchnologies que j'utilise occasionnellement"
+  },
+  "projects": {
+    "title": "Projets",
+    "eclothing": {
+      "title": "E-Clothing",
+      "description": "Application web de vente des vêtements en ligne."
     },
-    "hero": {
-      "title": "Bonjour👋, je suis",
-      "description": [
-        "Développeur Full stack",
-        "Développeur Javascript / Typescript",
-        "Développeur React.js / Next.js",
-        "Développeur JAM stack"
-      ],
-      "button": "Mon CV"
-    },
-    "about": {
-      "title": "À propos",
-      "description": "My name is Ismail AJIZOU full stack web developer based in Morocco, with +3 years of experience in JavaScript, React.js & Express.js. <br/>My enthusiasm for programming started back in 2018, when I decided to replicate a simple bash script created by a friend. Then I fell in love with computers and started learning web dev.<br/>My motiviation is to build projects and turn ideas into code, so each time I want to learn something I use it in a project.<br/>After getting a computer science degree in 2022, I immediately landed my first job as a full stack web developer.<br/>Currently I work as web developer, and never miss the chance to learn new technologies and improve my skills.",
-      "lovedLangs": "Téchnologies que j'utilise régulièrement",
-      "casualLangs": "Téchnologies que j'utilise occasionnellement"
-    },
-    "projects": {
-      "title": "Projets",
-      "eclothing": {
-        "title": "E-Clothing",
-        "description": "Application web de vente des vêtements en ligne."
-      },
-      "brain": {
-        "title": "Face detection app",
-        "description": "La première application web que j'ai créé avec React.js, elle permet de détecter les visages sur une image."
-      }
-    },
-    "contact": {
-      "title": "Contacter moi",
-      "description": "Vous pouvez me contacter via ce formulaire ou via les réseaux sociaux.",
-      "form": {
-        "name": "Nom",
-        "email": "Adresse email",
-        "subject": "Sujet",
-        "message": "Message",
-        "submit": "Envoyer"
-      },
-      "social": {
-        "description": "Vous pouvez me contacter via les réseaux sociaux.",
-        "phone": "Tél"
-      }
-    },
-    "footer": 
-      "Développé par Ismail AJIZOU. <br/>© 2022. Tous droits réservés."
-    ,
-    "extra": {
-      "built-with": "Construit avec",
-      "preview": "Apercevoir",
-      "code": "Code",
-      "404": "Introuvable",
-      "invalid-request": "Requête invalide",
-      "unknown-error": "Une erreur est survenue.",
-      "mail-sent": "Votre message a été envoyé avec succès.",
-      "invalid-inputs": "Veuillez vérifier les champs du formulaire."
-    },
-    "zod-errors": {
-      "invalid_type_error": "Champ invalide",
-      "required_error": "Champ obligatoire",
-      "min": "Valeur trop petite",
-      "max": "Valeur trop grande",
-      "email": "Adresse email invalide"
+    "brain": {
+      "title": "Face detection app",
+      "description": "La première application web que j'ai créé avec React.js, elle permet de détecter les visages sur une image."
     }
+  },
+  "contact": {
+    "title": "Contacter moi",
+    "description": "Vous pouvez me contacter via ce formulaire ou via les réseaux sociaux.",
+    "form": {
+      "name": "Nom",
+      "email": "Adresse email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer"
+    },
+    "social": {
+      "description": "Vous pouvez me contacter via les réseaux sociaux.",
+      "phone": "Tél"
+    }
+  },
+  "footer": "Développé par Ismail AJIZOU. <br/>© 2022. Tous droits réservés.",
+  "extra": {
+    "built-with": "Construit avec",
+    "preview": "Apercevoir",
+    "code": "Code",
+    "404": "Introuvable",
+    "invalid-request": "Requête invalide",
+    "unknown-error": "Une erreur est survenue.",
+    "mail-sent": "Votre message a été envoyé avec succès.",
+    "invalid-inputs": "Veuillez vérifier les champs du formulaire."
+  },
+  "zod-errors": {
+    "invalid_type_error": "Champ invalide",
+    "required_error": "Champ obligatoire",
+    "min": "Valeur trop petite",
+    "max": "Valeur trop grande",
+    "email": "Adresse email invalide"
   }
-  
+}

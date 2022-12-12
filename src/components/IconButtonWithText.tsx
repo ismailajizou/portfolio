@@ -19,12 +19,12 @@ const IconButtonWithText: FC<Props> = ({ icon, href, children, locale }) => {
         focus:outline-none'
     >
       <Icon />
-      <span
+      <p
         style={{ transition: '.5s' }}
         className='max-w-0 opacity-0 group-hover:ml-2 group-hover:max-w-[6rem] group-hover:opacity-100'
       >
         {children}
-      </span>
+      </p>
     </Link>
   );
 };

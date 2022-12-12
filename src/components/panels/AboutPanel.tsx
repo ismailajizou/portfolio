@@ -1,6 +1,6 @@
 import Me from '@/assets/me.png';
 import Image from 'next/image';
-import { Trans, useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'next-i18next';
 
 const AboutPanel = () => {
   const { t } = useTranslation();

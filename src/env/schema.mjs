@@ -24,6 +24,7 @@ export const clientSchema = z.object({
   NEXT_PUBLIC_PROFILE_TWITTER: z.string().url(),
   NEXT_PUBLIC_PROFILE_FACEBOOK: z.string().url(),
   NEXT_PUBLIC_PHONE_NUMBER: z.string(),
+  NEXT_PUBLIC_APP_URL: z.string().url(),
 });
 
 /**
@@ -39,4 +40,5 @@ export const clientEnv = {
   NEXT_PUBLIC_PROFILE_TWITTER: process.env.NEXT_PUBLIC_PROFILE_TWITTER,
   NEXT_PUBLIC_PROFILE_FACEBOOK: process.env.NEXT_PUBLIC_PROFILE_FACEBOOK,
   NEXT_PUBLIC_PHONE_NUMBER: process.env.NEXT_PUBLIC_PHONE_NUMBER,
+  NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
 };
