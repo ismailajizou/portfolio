@@ -1,10 +1,12 @@
-import EProject from '@/assets/eclothing.png';
 import Brain from '@/assets/brain.png';
+import EProject from '@/assets/eclothing.png';
 import AppHead from '@/components/AppHead';
+import Footer from '@/components/Footer';
 import IconButtonWithText from '@/components/IconButtonWithText';
 import Layout from '@/components/Layout';
 import Panel from '@/components/Panel';
 import AboutPanel from '@/components/panels/AboutPanel';
+import ContactPanel from '@/components/panels/ContactPanel';
 import HomePanel from '@/components/panels/HomePanel';
 import Technology from '@/components/Technology';
 import { Parallax, type IParallax } from '@react-spring/parallax';
@@ -13,8 +15,10 @@ import {
   InferGetStaticPropsType,
   type NextPage,
 } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { AiFillEye, AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { FaGithub, FaNode } from 'react-icons/fa';
@@ -32,10 +36,6 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
-import Footer from '@/components/Footer';
-import ContactPanel from '@/components/panels/ContactPanel';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'react-i18next';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
@@ -49,6 +49,7 @@ const Home: NextPage = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const { t } = useTranslation();
+
   const refParallax = useRef<IParallax | null>(null);
   return (
     <>

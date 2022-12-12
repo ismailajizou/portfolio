@@ -19,7 +19,7 @@ const ParticlesBg = () => {
 
   return (
     <Particles
-      className='fixed inset-0 m-0 h-screen w-screen p-0 -z-50'
+      className='fixed inset-0 -z-50 m-0 h-screen w-screen p-0'
       init={particlesInit}
       loaded={particlesLoaded}
       options={{

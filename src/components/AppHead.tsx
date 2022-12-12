@@ -31,10 +31,7 @@ const AppHead = () => {
           content="Hello! I'm Ismail AJIZOU, full stack developer based in Morocco."
         />
         <meta property='og:type' content='website' />
-        <meta
-          property='og:image'
-          content={`/icon.png`}
-        />
+        <meta property='og:image' content={`/icon.png`} />
         <meta name='twitter:title' content='Ismail AJIZOU' />
         <link
           rel='apple-touch-icon'
