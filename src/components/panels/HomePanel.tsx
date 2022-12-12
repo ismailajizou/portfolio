@@ -7,7 +7,6 @@ import { TypeAnimation } from 'react-type-animation';
 const HomePanel = () => {
   const { t } = useTranslation();
   const router = useRouter();
-  console.log(router)
   return (
     <div className='flex flex-col items-start text-white'>
       <div className='relative max-w-4xl'>
