@@ -14,7 +14,7 @@ specifiers:
   axios: ^1.2.1
   eslint: ^8.29.0
   eslint-config-next: 13.0.6
-  i18next: ^22.4.4
+  i18next: ^22.4.5
   mailtrap: ^3.0.1
   next: 13.0.6
   next-i18next: ^13.0.1
@@ -35,22 +35,22 @@ specifiers:
   tsparticles-engine: ^2.6.0
   typescript: ^4.9.4
   zod: ^3.20.2
-  zod-i18n-map: ^1.5.0
+  zod-i18n-map: ^1.6.0
 
 dependencies:
   '@hookform/resolvers': 2.9.10_react-hook-form@7.40.0
   '@next/font': 13.0.6
   '@react-spring/parallax': 9.6.0_biqbaboplfbrettd7655fr4n2y
   axios: 1.2.1
-  i18next: 22.4.4
+  i18next: 22.4.5
   mailtrap: 3.0.1
   next: 13.0.6_672uxklweod7ene3nqtsh262ca
-  next-i18next: 13.0.1_t2f6moo7fraplllyvguf657p6i
+  next-i18next: 13.0.1_vc7hbpjjegn3mgipl4lzap4ehm
   nodemailer: 6.8.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.40.0_react@18.2.0
-  react-i18next: 12.1.1_yb3i3olcf3ubnejpn2qaa2zs64
+  react-i18next: 12.1.1_eq4x7teyi7775y4ukmammj6ncy
   react-icons: 4.7.1_react@18.2.0
   react-spring: 9.6.0_qidajadjtlaylha4g4eobfhkta
   react-tsparticles: 2.6.0_react@18.2.0
@@ -58,7 +58,7 @@ dependencies:
   tsparticles: 2.6.0
   tsparticles-engine: 2.6.0
   zod: 3.20.2
-  zod-i18n-map: 1.5.0_i18next@22.4.4+zod@3.20.2
+  zod-i18n-map: 1.6.0_i18next@22.4.5+zod@3.20.2
 
 devDependencies:
   '@types/node': 18.11.14
@@ -4171,8 +4171,8 @@ packages:
     resolution: {integrity: sha512-gur0HAEkVDeUgZ9WNUcACYYl2N5FUt0C6bQCWsFPc+IYMXYWfiFQa8QQ930QAVYf71I75Ptl4XqQo5sl/u6/mA==}
     dev: false
 
-  /i18next/22.4.4:
-    resolution: {integrity: sha512-uTUx1buYCdii2sqLcYmT2Va7zDARwfzg1DapSwkwLNGiPo+fXogEbUwV92j8njHbU7UmZFwHTcuMAi8l+vtIYg==}
+  /i18next/22.4.5:
+    resolution: {integrity: sha512-Kc+Ow0guRetUq+kv02tj0Yof9zveROPBAmJ8UxxNODLVBRSwsM4iD0Gw3BEieOmkWemF6clU3K1fbnCuTqiN2Q==}
     dependencies:
       '@babel/runtime': 7.20.6
     dev: false
@@ -5283,7 +5283,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /next-i18next/13.0.1_t2f6moo7fraplllyvguf657p6i:
+  /next-i18next/13.0.1_vc7hbpjjegn3mgipl4lzap4ehm:
     resolution: {integrity: sha512-GnywgEQBvXZFUJAwgg8hKJw6khl7yo3qjZkgpX2atJ5Zv8l9kpVdy5RSIc8hiVImIZVwgOfoZ3YTyoWqcP4+Aw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -5296,11 +5296,11 @@ packages:
       '@types/hoist-non-react-statics': 3.3.1
       core-js: 3.26.1
       hoist-non-react-statics: 3.3.2
-      i18next: 22.4.4
+      i18next: 22.4.5
       i18next-fs-backend: 2.1.0
       next: 13.0.6_672uxklweod7ene3nqtsh262ca
       react: 18.2.0
-      react-i18next: 12.1.1_yb3i3olcf3ubnejpn2qaa2zs64
+      react-i18next: 12.1.1_eq4x7teyi7775y4ukmammj6ncy
     dev: false
 
   /next/13.0.6_672uxklweod7ene3nqtsh262ca:
@@ -5910,7 +5910,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-i18next/12.1.1_yb3i3olcf3ubnejpn2qaa2zs64:
+  /react-i18next/12.1.1_eq4x7teyi7775y4ukmammj6ncy:
     resolution: {integrity: sha512-mFdieOI0LDy84q3JuZU6Aou1DoWW2fhapcTGeBS8+vWSJuViuoCLQAMYSb0QoHhXS8B0WKUOPpx4cffAP7r/aA==}
     peerDependencies:
       i18next: '>= 19.0.0'
@@ -5925,7 +5925,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       html-parse-stringify: 3.0.1
-      i18next: 22.4.4
+      i18next: 22.4.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-native: 0.70.6_ildacul6tjko7jf3wnaev3ii3q
@@ -7572,13 +7572,13 @@ packages:
     resolution: {integrity: sha512-raRj6r0gPzopFm5XWBJZr/NuV4EEnT4iE+U3dp5FV5pCb588Gmm3zLIp/j9yqqcMiHH8VNQlerLTgOqL7krh6w==}
     dev: false
 
-  /zod-i18n-map/1.5.0_i18next@22.4.4+zod@3.20.2:
-    resolution: {integrity: sha512-xAHpdO8f0hhHXCIHxsT6HMZAz1PUsxbLbu3SSsVqpoW990iTE8AMsvVCihKASwwnq8ynTF8WjOIJc2GiU5E3fQ==}
+  /zod-i18n-map/1.6.0_i18next@22.4.5+zod@3.20.2:
+    resolution: {integrity: sha512-L2pDb23wDCznDzz3l2yTY6BwauWYzZVtVzmhdZ3bqqLor6AOUsMp97f7+U2ct/GZeCKU9v25IoY9cXxJYR60kA==}
     peerDependencies:
       i18next: '>=21.3.0'
       zod: '>=3.17.0'
     dependencies:
-      i18next: 22.4.4
+      i18next: 22.4.5
       zod: 3.20.2
     dev: false
 

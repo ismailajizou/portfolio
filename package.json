@@ -14,7 +14,7 @@
     "@next/font": "^13.0.6",
     "@react-spring/parallax": "^9.6.0",
     "axios": "^1.2.1",
-    "i18next": "^22.4.4",
+    "i18next": "^22.4.5",
     "mailtrap": "^3.0.1",
     "next": "13.0.6",
     "next-i18next": "^13.0.1",
@@ -30,7 +30,7 @@
     "tsparticles": "^2.6.0",
     "tsparticles-engine": "^2.6.0",
     "zod": "^3.20.2",
-    "zod-i18n-map": "^1.5.0"
+    "zod-i18n-map": "^1.6.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.14",
