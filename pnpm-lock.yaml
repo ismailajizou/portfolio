@@ -15,7 +15,6 @@ specifiers:
   eslint: ^8.29.0
   eslint-config-next: 13.0.6
   i18next: ^22.4.5
-  mailtrap: ^3.0.1
   next: 13.0.6
   next-i18next: ^13.0.1
   nodemailer: ^6.8.0
@@ -43,7 +42,6 @@ dependencies:
   '@react-spring/parallax': 9.6.0_biqbaboplfbrettd7655fr4n2y
   axios: 1.2.1
   i18next: 22.4.5
-  mailtrap: 3.0.1
   next: 13.0.6_672uxklweod7ene3nqtsh262ca
   next-i18next: 13.0.1_vc7hbpjjegn3mgipl4lzap4ehm
   nodemailer: 6.8.0
@@ -4812,14 +4810,6 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
-
-  /mailtrap/3.0.1:
-    resolution: {integrity: sha512-hAiiMzUQ5orh1JaprPzeVC8/ILeJ9V2qXmCgt6i/5LBPSJZAdStJDgzlWfu0Vf7Qht2RVu4NYLSvwcwBVt1RsQ==}
-    dependencies:
-      axios: 1.2.1
-    transitivePeerDependencies:
-      - debug
-    dev: false
 
   /make-dir/2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}

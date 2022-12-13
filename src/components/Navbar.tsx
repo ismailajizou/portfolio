@@ -17,16 +17,16 @@ const Navbar = () => {
         <Image src='/icons/icon.svg' alt='logo' fill priority />
       </div>
       <ButtonsStack direction='horizontal'>
-        <IconButtonWithText href='#home' icon={FaHome}>
+        <IconButtonWithText target='_blank' href='#home' icon={FaHome}>
           {t('navigation.home')}
         </IconButtonWithText>
-        <IconButtonWithText href='#about' icon={CgProfile}>
+        <IconButtonWithText target='_blank' href='#about' icon={CgProfile}>
           {t('navigation.about')}
         </IconButtonWithText>
-        <IconButtonWithText href='#work' icon={IoImages}>
+        <IconButtonWithText target='_blank' href='#work' icon={IoImages}>
           {t('navigation.work')}
         </IconButtonWithText>
-        <IconButtonWithText href='#contact' icon={RiSendPlaneFill}>
+        <IconButtonWithText target='_blank' href='#contact' icon={RiSendPlaneFill}>
           {t('navigation.contact')}
         </IconButtonWithText>
         <IconButtonWithText
