@@ -63,6 +63,7 @@
     "required_error": "Champ obligatoire",
     "min": "Valeur trop petite",
     "max": "Valeur trop grande",
-    "email": "Adresse email invalide"
+    "email": "Adresse email invalide",
+    "email-sent": "Message envoyé avec succès"
   }
 }
