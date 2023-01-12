@@ -26,7 +26,11 @@ const Navbar = () => {
         <IconButtonWithText target='_blank' href='#work' icon={IoImages}>
           {t('navigation.work')}
         </IconButtonWithText>
-        <IconButtonWithText target='_blank' href='#contact' icon={RiSendPlaneFill}>
+        <IconButtonWithText
+          target='_blank'
+          href='#contact'
+          icon={RiSendPlaneFill}
+        >
           {t('navigation.contact')}
         </IconButtonWithText>
         <IconButtonWithText

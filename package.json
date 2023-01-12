@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": ">=16.18.1",
+    "node": ">=18.11.0",
     "yarn": "1"
   },
   "scripts": {

@@ -27,7 +27,9 @@ export default async function handler(
       subject,
       text: body,
     });
-    res.status(200).json({ message: i18n?.t('extra.email-sent'), response: data });
+    res
+      .status(200)
+      .json({ message: i18n?.t('extra.email-sent'), response: data });
   } catch (err) {
     if (err instanceof z.ZodError) {
       return res
