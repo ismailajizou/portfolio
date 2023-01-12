@@ -1,13 +1,21 @@
 import Link, { LinkProps } from 'next/link';
-import type { FC, ReactNode } from 'react';
+import type { AnchorHTMLAttributes, FC, ReactNode } from 'react';
 import type { IconType } from 'react-icons';
 
-interface Props extends LinkProps {
+type NextLinkProps = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
+
+interface Props extends NextLinkProps {
   icon: IconType;
   children: ReactNode;
 }
 
-const IconButtonWithText: FC<Props> = ({ icon, href, children, locale }) => {
+const IconButtonWithText: FC<Props> = ({
+  icon,
+  href,
+  children,
+  locale,
+  ...props
+}) => {
   const Icon = icon;
   return (
     <Link
@@ -17,6 +25,7 @@ const IconButtonWithText: FC<Props> = ({ icon, href, children, locale }) => {
       className='btn-colors group relative m-1 inline-flex h-8 cursor-pointer items-center justify-start overflow-hidden
         rounded-full border bg-neutral-900 bg-opacity-70 p-4 text-sm font-medium
         focus:outline-none'
+      {...props}
     >
       <Icon />
       <p
