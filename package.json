@@ -2,6 +2,11 @@
   "name": "t3-portfolio",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": ">=16.18.1",
+    "yarn": "1"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
