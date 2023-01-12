@@ -1,8 +1,8 @@
-import Link, { LinkProps } from 'next/link';
+import Link, { type LinkProps } from 'next/link';
 import type { AnchorHTMLAttributes, FC, ReactNode } from 'react';
 import type { IconType } from 'react-icons';
 
-type NextLinkProps = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
+type NextLinkProps= LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
 
 interface Props extends NextLinkProps {
   icon: IconType;

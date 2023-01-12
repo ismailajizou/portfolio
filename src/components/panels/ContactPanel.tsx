@@ -1,5 +1,5 @@
 import { env } from '@/env/client.mjs';
-import { mailSchema, TMail } from '@/utils/schemas/mail.schema';
+import { mailSchema, type TMail } from '@/utils/schemas/mail.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { AxiosError } from 'axios';
 import { useState } from 'react';

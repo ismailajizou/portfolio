@@ -10,10 +10,10 @@ import ContactPanel from '@/components/panels/ContactPanel';
 import HomePanel from '@/components/panels/HomePanel';
 import Technology from '@/components/Technology';
 import { Parallax, type IParallax } from '@react-spring/parallax';
-import {
+import type {
   GetStaticPropsContext,
   InferGetStaticPropsType,
-  type NextPage,
+  NextPage,
 } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
