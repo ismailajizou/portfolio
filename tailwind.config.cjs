@@ -6,9 +6,9 @@ module.exports = {
       backdropBlur: {
         xs: '2px',
       },
-      fontFamily: {
-        'space-mono': ['var(--font-space-mono)']
-      },
+      // fontFamily: {
+      //   'space-mono': ['var(--font-space-mono)']
+      // },
     },
   },
   plugins: [],

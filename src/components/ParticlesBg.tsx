@@ -1,3 +1,4 @@
+'use client'
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import type { Container, Engine } from 'tsparticles-engine';
@@ -19,7 +20,7 @@ const ParticlesBg = () => {
 
   return (
     <Particles
-      className='fixed inset-0 -z-50 m-0 h-screen w-screen p-0'
+      className='fixed inset-0  m-0 h-screen w-screen p-0'
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
@@ -29,7 +30,7 @@ const ParticlesBg = () => {
         fpsLimit: 60,
         pauseOnOutsideViewport: false,
         background: {
-          color: '#171717',
+          // color: '#171717',
           position: 'fixed',
         },
         particles: {

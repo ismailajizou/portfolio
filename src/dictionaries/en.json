@@ -47,7 +47,10 @@
       "phone": "Phone"
     }
   },
-  "footer": "Designed & built By Ismail Ajizou.<br/> © 2022. All rights reserved.",
+  "footer": {
+    "main": "Designed & built By Ismail Ajizou.",
+    "copyright": "© 2022. All rights reserved."
+  },
   "extra": {
     "built-with": "Built with",
     "preview": "Preview",
@@ -55,7 +58,7 @@
     "404": "Not found",
     "invalid-request": "Invalid request",
     "unknown-error": "An error has occured. Please try again later.",
-    "mail-sent": "Your message has been sent. I'll get back to you as soon as possible.",
+    "email-sent": "Your message has been sent. I'll get back to you as soon as possible.",
     "invalid-inputs": "Please verify your inputs."
   },
   "zod-errors": {
@@ -64,5 +67,7 @@
     "min": "Field must be at least {min} characters long",
     "max": "Field must be at most {max} characters long",
     "email": "Invalid email address",
-    "email-sent": "Your message has been sent. I'll get back to you as soon as possible."  }
+    "email-sent": "Your message has been sent. I'll get back to you as soon as possible."
+  },
+  "loading": "Loading..."
 }

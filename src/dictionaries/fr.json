@@ -47,7 +47,10 @@
       "phone": "Tél"
     }
   },
-  "footer": "Développé par Ismail AJIZOU. <br/>© 2022. Tous droits réservés.",
+  "footer": {
+    "main": "Développé par Ismail AJIZOU.",
+    "copyright": "© 2022. Tous droits réservés."
+  },
   "extra": {
     "built-with": "Construit avec",
     "preview": "Apercevoir",
@@ -55,7 +58,7 @@
     "404": "Introuvable",
     "invalid-request": "Requête invalide",
     "unknown-error": "Une erreur est survenue.",
-    "mail-sent": "Votre message a été envoyé avec succès.",
+    "email-sent": "Votre message a été envoyé avec succès.",
     "invalid-inputs": "Veuillez vérifier les champs du formulaire."
   },
   "zod-errors": {
@@ -65,5 +68,6 @@
     "max": "Valeur trop grande",
     "email": "Adresse email invalide",
     "email-sent": "Message envoyé avec succès"
-  }
+  },
+  "loading": "Chargement..."
 }

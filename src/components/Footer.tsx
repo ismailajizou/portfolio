@@ -1,10 +1,10 @@
-import { Trans, useTranslation } from 'next-i18next';
+import type { TDictionary } from '@/dictionaries';
 
-const Footer = () => {
-  const { t } = useTranslation();
+const Footer = ({ dictionary }: { dictionary: TDictionary }) => {
   return (
     <div className='text-center text-sm text-white'>
-      <Trans as='div'>{t('footer')}</Trans>
+      <p>{dictionary['footer'].main}</p>
+      <p>{dictionary['footer'].copyright}</p>
     </div>
   );
 };
