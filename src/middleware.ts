@@ -10,7 +10,7 @@ function getLocale(request: NextRequest): string | undefined {
   // Negotiator expects plain object so we need to transform headers
   const negotiatorHeaders: Record<string, string> = {};
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-
+  console.log(negotiatorHeaders)
   // Use negotiator and intl-localematcher to get best locale
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -28,7 +28,12 @@ export function middleware(request: NextRequest) {
       '/manifest.json',
       '/favicon.ico',
       '/icon.svg',
+      '/icon',
       '/robots.txt',
+      '/opengraph-image',
+      '/twitter-image',
+      '/fonts/SpaceMono-Bold.ttf',
+      '/fonts/SpaceMono-Regular.ttf',
       // Your other files in `public`
       '/icons/icon.svg',
       '/resume/fr.pdf',

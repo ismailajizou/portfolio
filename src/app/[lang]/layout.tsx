@@ -8,6 +8,13 @@ import { env } from '@/env/client.mjs';
 
 export const metadata: Metadata = {
   title: 'Ismail Ajizou',
+  alternates: {
+    canonical: env.NEXT_PUBLIC_APP_URL,
+    languages: {
+      en: `${env.NEXT_PUBLIC_APP_URL}/en`,
+      fr: `${env.NEXT_PUBLIC_APP_URL}/fr`,
+    },
+  },
   description:
     "Hello! I'm Ismail AJIZOU, full stack developer based in Morocco.",
   twitter: {
