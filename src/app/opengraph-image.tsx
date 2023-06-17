@@ -41,8 +41,13 @@ export default async function Image() {
           fontFamily: 'Space Mono',
         }}
       >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${env.NEXT_PUBLIC_APP_URL}/icons/icon.svg`} alt='Ismail Ajizou' width={200} height={200} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`${env.NEXT_PUBLIC_APP_URL}/icons/icon.svg`}
+          alt='Ismail Ajizou'
+          width={200}
+          height={200}
+        />
         <div
           style={{
             backgroundImage:

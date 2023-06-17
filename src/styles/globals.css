@@ -27,5 +27,4 @@
   .gradient-blue {
     @apply bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-600;
   }
-
 }

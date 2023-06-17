@@ -53,6 +53,7 @@ const Sidebar = () => {
               icon={icon}
               alt={alt}
               label={label}
+              target='_blank'
             />
           )
         )}

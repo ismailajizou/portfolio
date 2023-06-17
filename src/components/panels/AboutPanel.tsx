@@ -1,12 +1,10 @@
 import Me from '@/assets/me.png';
 import { type TDictionary } from '@/dictionaries';
-import { type Locale } from 'i18n-config';
 import Image from 'next/image';
 
 const AboutPanel = ({
   dictionary,
 }: {
-  locale: Locale;
   dictionary: TDictionary;
 }) => {
   // const dict = await getDictionary(locale);

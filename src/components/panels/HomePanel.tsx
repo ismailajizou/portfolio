@@ -1,17 +1,10 @@
 'use client';
 import { type TDictionary } from '@/dictionaries';
 import { env } from '@/env/client.mjs';
-import type { Locale } from 'i18n-config';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 
-const HomePanel = ({
-  locale,
-  dictionary,
-}: {
-  locale: Locale;
-  dictionary: TDictionary;
-}) => {
+const HomePanel = ({ dictionary }: { dictionary: TDictionary }) => {
   return (
     <div className='flex flex-col items-start text-white'>
       <div className='relative max-w-4xl'>
@@ -37,7 +30,7 @@ const HomePanel = ({
         />
       </div>
       <Link
-        href={`${env.NEXT_PUBLIC_APP_URL}/resume/${locale}.pdf`}
+        href={`${env.NEXT_PUBLIC_APP_URL}/resume/en.pdf`}
         target='_blank'
         className='btn-colors relative mt-8 border p-4 backdrop-blur-xs'
       >

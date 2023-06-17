@@ -7,11 +7,12 @@ import { z } from 'zod';
  */
 export const serverSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']),
-  MAILTRAP_TOKEN: z.string(),
-  MAILTRAP_HOST: z.string(),
+  RESEND_API_KEY: z.string(),
   MAIL_RECEIVER: z.string().email(),
-  MAILTRAP_USER: z.string(),
-  MAILTRAP_PASS: z.string(),
+  // MAILTRAP_TOKEN: z.string(),
+  // MAILTRAP_HOST: z.string(),
+  // MAILTRAP_USER: z.string(),
+  // MAILTRAP_PASS: z.string(),
 });
 
 /**

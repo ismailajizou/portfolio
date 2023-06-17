@@ -1,7 +1,5 @@
 import '@/styles/globals.css';
 import { Space_Mono } from 'next/font/google';
-import type { Locale } from '../../../i18n-config';
-import { i18n } from '../../../i18n-config';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { env } from '@/env/client.mjs';
@@ -11,8 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: env.NEXT_PUBLIC_APP_URL,
     languages: {
-      en: `${env.NEXT_PUBLIC_APP_URL}/en`,
-      fr: `${env.NEXT_PUBLIC_APP_URL}/fr`,
+      en: `${env.NEXT_PUBLIC_APP_URL}`,
     },
   },
   description:
@@ -31,24 +28,14 @@ export const metadata: Metadata = {
   },
 };
 
-export async function generateStaticParams() {
-  return i18n.locales.map(locale => ({ lang: locale }));
-}
 const spaceMono = Space_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-space-mono',
 });
-const RootLayout = async ({
-  children,
-  params: { lang },
-}: {
-  children: React.ReactNode;
-  params: { lang: Locale };
-}) => {
-  if ((lang as unknown) === 'favicon.ico') return;
+const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang={lang}>
+    <html lang='en'>
       <body className={`${spaceMono.className}`}>{children}</body>
       <Script
         strategy='lazyOnload'

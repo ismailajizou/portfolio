@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { type TDictionary } from '@/dictionaries';
 import type { FC, ReactNode } from 'react';
 import Navbar from './Navbar';
@@ -8,16 +8,13 @@ import Sidebar from './Sidebar';
 interface Props {
   className?: string;
   children?: ReactNode;
-  locale: string
-  dictionary: TDictionary
+  locale: string;
+  dictionary: TDictionary;
 }
-
 
 const Layout: FC<Props> = ({ children, locale, dictionary }) => {
   return (
-    <div
-      className={`relative h-screen w-screen scroll-smooth bg-black`}
-    >
+    <div className={`relative h-screen w-screen scroll-smooth bg-black`}>
       <ParticlesBg />
       <div className='max-w-screen relative  flex h-screen max-h-screen w-screen flex-col'>
         <Navbar locale={locale} dictionary={dictionary} />

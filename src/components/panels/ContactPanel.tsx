@@ -1,25 +1,14 @@
 'use client';
 import { type TDictionary } from '@/dictionaries';
 import { env } from '@/env/client.mjs';
-import { init } from '@/utils/init_i18n';
 import { mailSchema, type TMail } from '@/utils/schemas/mail.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { AxiosError } from 'axios';
-import { type Locale } from 'i18n-config';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { CgSpinnerTwoAlt } from 'react-icons/cg';
 
-const ContactPanel = ({
-  dictionary,
-  locale,
-}: {
-  dictionary: TDictionary;
-  locale: Locale;
-}) => {
-  useEffect(() => {
-   init(locale);
-  }, [locale]);
+const ContactPanel = ({ dictionary }: { dictionary: TDictionary }) => {
   const {
     register,
     handleSubmit,
@@ -32,7 +21,7 @@ const ContactPanel = ({
 
   const onSubmit = async (data: TMail) => {
     try {
-      const res = await axios.post(`/${locale}/mail`, data);
+      const res = await axios.post(`/mail`, data);
       setResponse({ status: 'success', message: res.data.message });
     } catch (err) {
       if (err instanceof AxiosError)

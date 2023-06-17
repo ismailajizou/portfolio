@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import type { Container, Engine } from 'tsparticles-engine';

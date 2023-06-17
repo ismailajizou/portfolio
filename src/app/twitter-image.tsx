@@ -12,20 +12,19 @@ const font = async () => {
 export const runtime = 'edge';
 
 // Image metadata
+export const alt = 'Ismail Ajizou';
 export const size = {
-  width: 32,
-  height: 32,
+  width: 1200,
+  height: 675,
 };
 export const contentType = 'image/png';
 
 // Image generation
-export default async function Icon() {
-  // get the font
-  const spaceMono = await font();
+export default async function Image() {
+  const fontBuffer = await font();
   return new ImageResponse(
     (
       // ImageResponse JSX element
-
       <div
         style={{
           display: 'flex',
@@ -35,13 +34,20 @@ export default async function Icon() {
           justifyContent: 'center',
           flexDirection: 'column',
           background: 'black',
-          fontSize: 24,
+          fontSize: 96,
+          letterSpacing: -2,
           fontWeight: 700,
           textAlign: 'center',
           fontFamily: 'Space Mono',
-          borderRadius: '10%',
         }}
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`${env.NEXT_PUBLIC_APP_URL}/icons/icon.svg`}
+          alt='Ismail Ajizou'
+          width={200}
+          height={200}
+        />
         <div
           style={{
             backgroundImage:
@@ -51,19 +57,18 @@ export default async function Icon() {
             color: 'transparent',
           }}
         >
-          IA
+          Ismail Ajizou
         </div>
       </div>
     ),
-    // ImageResponse options
     {
-      // For convenience, we can re-use the exported icons size metadata
-      // config to also set the ImageReponse's width and height.
+      // For convenience, we can re-use the exported opengraph-image
+      // size config to also set the ImageReponse's width and height.
       ...size,
       fonts: [
         {
           name: 'Space Mono',
-          data: spaceMono,
+          data: fontBuffer,
           weight: 700,
         },
       ],

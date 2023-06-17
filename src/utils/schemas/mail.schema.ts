@@ -8,4 +8,3 @@ export const mailSchema = z.object({
 });
 
 export type TMail = z.infer<typeof mailSchema>;
-
