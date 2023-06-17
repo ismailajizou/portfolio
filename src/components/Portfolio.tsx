@@ -10,7 +10,7 @@ import ContactPanel from '@/components/panels/ContactPanel';
 import HomePanel from '@/components/panels/HomePanel';
 import type { TDictionary } from '@/dictionaries';
 import { Parallax } from '@react-spring/parallax';
-import type { Locale } from 'i18n-config';
+// import type { Locale } from 'i18n-config';
 import Image from 'next/image';
 import { AiFillEye, AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
@@ -33,16 +33,14 @@ import Layout from './Layout';
 
 const Portfolio = ({
   dictionary,
-  locale: lang,
 }: {
   dictionary: TDictionary;
-  locale: Locale;
 }) => {
   return (
-    <Layout dictionary={dictionary} locale={lang}>
+    <Layout dictionary={dictionary}>
       <Parallax className='no-scrollbar inset-0 p-4 lg:p-8' pages={7}>
         <Panel offset={0} speed={2.5} className='flex items-center' id='home'>
-          <HomePanel locale={lang} dictionary={dictionary} />
+          <HomePanel dictionary={dictionary} />
         </Panel>
         <Panel
           id='about'
@@ -50,7 +48,7 @@ const Portfolio = ({
           speed={0.5}
           className='flex items-center justify-center'
         >
-          <AboutPanel locale={lang} dictionary={dictionary} />
+          <AboutPanel dictionary={dictionary} />
         </Panel>
         <Panel
           offset={2}
@@ -196,7 +194,7 @@ const Portfolio = ({
           className='flex flex-col items-center justify-center'
         >
           <div>
-            <ContactPanel locale={lang} dictionary={dictionary} />
+            <ContactPanel dictionary={dictionary} />
             <Footer dictionary={dictionary} />
           </div>
         </Panel>

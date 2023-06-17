@@ -11,7 +11,6 @@ const Navbar = ({
   dictionary,
 }: {
   dictionary: TDictionary;
-  locale: string;
 }) => {
   // const pathName = usePathname();
   // const redirectedPathName = (locale: Locale) => {
