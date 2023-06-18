@@ -13,9 +13,10 @@ import * as React from 'react';
 interface EmailTemplateProps {
   name: string;
   body: string;
+  email: string;
 }
 
-export const EmailTemplate = ({ body, name }: EmailTemplateProps) => (
+export const EmailTemplate = ({ body, name, email }: EmailTemplateProps) => (
   <Html>
     <Head />
     <Tailwind>
@@ -27,6 +28,7 @@ export const EmailTemplate = ({ body, name }: EmailTemplateProps) => (
         }}
       >
         <Container>
+          <Heading className='text-bold text-lg'>Email: {email}</Heading>
           <Heading className='text-bold text-lg'>Name: {name}</Heading>
           <Section>
             <Text>{body}</Text>

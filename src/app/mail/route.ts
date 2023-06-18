@@ -12,10 +12,10 @@ export async function POST(req: Request) {
     const reqBody = await req.json();
     const { name, email, subject, body } = mailSchema.parse(reqBody);
     await resend.emails.send({
-      from: email,
+      from: "contact@ismail-ajizou.com",
       to: env.MAIL_RECEIVER,
       subject: subject,
-      react: EmailTemplate({ name, body }),
+      react: EmailTemplate({ name, body, email }),
     });
     return NextResponse.json({
       message: 'Email sent!',
